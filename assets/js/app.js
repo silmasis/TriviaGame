@@ -18,31 +18,40 @@ var trivia = {
   timerId : '',
   // questions options and answers data
   questions: {
-    q1: 'Who is actually a chef?',
-    q2: 'What does Joey love to eat?',
-    q3: 'How many times has Ross been divorced?',
-    q4: 'How many types of towels does Monica have?',
-    q5: "Who stole Monica's thunder after she got engaged?",
-    q6: 'Who hates Thanksgiving?',
-    q7: "Who thinks they're always the last to find out everything?"
+    q1: 'What year did the Miami Dophins get the only undefeated season in NFL history?',
+    q2: 'Which NFL franchise has the all-time worst win-loss percentage?',
+    q3: 'The current Baltimore Ravens used to be know as:',
+    q4: 'How many Super Bowl Appearances does the New England Patriots have?',
+    q5: 'What is the oldest stadium constructed specifically for the NFL?',
+    q6: 'Who is the only NFL team to not play on Thanksgiving?',
+    q7: 'Who has the longest field goal in NFL history?',
+    q8: 'How many years must a player be retired to be eligible for the Pro Football Hall of Fame?',
+    q9: 'Which Super Bowl was the most-watched ever?',
+    q10: 'Which NFL team blew a 28-3 lead in the Super Bowl?'
   },
   options: {
-    q1: ['Monica', 'Chandler', 'Rachel', 'Ross'],
-    q2: ['Fish', 'Apples', 'Oranges', 'Sandwhiches'],
-    q3: ['5', '2', '1', '3'],
-    q4: ['3', '8', '11', '6'],
-    q5: ['Rachel','Phoebe','Emily','Carol'],
-    q6: ['Joey','Chandler','Rachel','Ross'],
-    q7: ['Ross', 'Phoebe', 'Monica','Chandler']
+    q1: ['1969', '1970', '1972', '1973'],
+    q2: ['Arizona Cardinals', 'Atlanta Falcons', 'Tampa Bay Buccaneers', 'Jacksonville Jaguars'],
+    q3: ['Baltimore Colts', 'Cleveland Browns', 'Houston Oilers', 'New York Titans'],
+    q4: ['5', '6', '10', '11'],
+    q5: ['Lambeau Field','Soldier Field','L.A. Memorial Coliseum','Arrowhead Stadium'],
+    q6: ['Cleveland Browns','Jacksonville Jaguars','Houston Texans','Los Angeles Rams'],
+    q7: ['Adam Vinatieri', 'Matt Prater', 'Sebastian Janikowski','Justin Tucker'],
+    q8: ['5','8','10','15'],
+    q9: ['SB46: Patriots vs Giants','SB49: Patriots vs Seahawks','SB50: Panthers vs Broncos','SB51:Patriots vs Falcons'],
+    q10: ['Atlanta Falcons','Atlanta Falcons','Atlanta Falcons','Atlanta Falcons']
   },
   answers: {
-    q1: 'Monica',
-    q2: 'Sandwhiches',
-    q3: '3',
+    q1: '1972',
+    q2: 'Tampa Bay Buccaneers',
+    q3: 'Cleveland Browns',
     q4: '11',
-    q5: 'Rachel',
-    q6: 'Chandler',
-    q7: 'Phoebe'
+    q5: 'Lambeau Field',
+    q6: 'Jacksonville Jaguars',
+    q7: 'Matt Prater',
+    q8: '5',
+    q9: 'SB49: Patriots vs Seahawks',
+    q10: 'Atlanta Falcons'
   },
   // trivia methods
   // method to initialize game
@@ -76,7 +85,7 @@ var trivia = {
   nextQuestion : function(){
     
     // set timer to 20 seconds each question
-    trivia.timer = 10;
+    trivia.timer = 20;
      $('#timer').removeClass('last-seconds');
     $('#timer').text(trivia.timer);
     
