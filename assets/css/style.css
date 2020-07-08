@@ -18,10 +18,6 @@ body {
   color: red;
 }
 
-.option {
-  margin: 15px;
-}
-
 @font-face {
   font-family: 'clock';
   src: url('fonts/digital-7.regular.ttf')format('truetype');

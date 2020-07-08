@@ -103,7 +103,7 @@ var trivia = {
     
     // creates all the trivia guess options in the html
     $.each(questionOptions, function(index, key){
-      $('#options').append($('<button class="option btn btn-info btn-lg">'+key+'</button>'));
+      $('#options').append($('<button class="option btn btn-info btn-lg btn-block">'+key+'</button>'));
     })
     
   },
@@ -122,7 +122,7 @@ var trivia = {
       trivia.unanswered++;
       trivia.result = false;
       clearInterval(trivia.timerId);
-      resultId = setTimeout(trivia.guessResult, 1000);
+      resultId = setTimeout(trivia.guessResult, 5000);
       $('#results').html('<h3>Out of time! The answer was '+ Object.values(trivia.answers)[trivia.currentSet] +'</h3>');
     }
     // if all the questions have been shown end the game, show results
@@ -160,7 +160,7 @@ var trivia = {
       
       trivia.correct++;
       clearInterval(trivia.timerId);
-      resultId = setTimeout(trivia.guessResult, 1000);
+      resultId = setTimeout(trivia.guessResult, 2000);
       $('#results').html('<h3>Correct Answer!</h3>');
     }
     // else the user picked the wrong option, increment incorrect
@@ -170,7 +170,7 @@ var trivia = {
       
       trivia.incorrect++;
       clearInterval(trivia.timerId);
-      resultId = setTimeout(trivia.guessResult, 1000);
+      resultId = setTimeout(trivia.guessResult, 5000);
       $('#results').html('<h3>Better luck next time! '+ currentAnswer +'</h3>');
     }
     
