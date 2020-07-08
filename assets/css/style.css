@@ -1,13 +1,35 @@
-body{
-	text-align: center;
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-image: url('../images/background.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.text-muted{
-	color: blue;
+
+.text-muted {
+  color: blue;
 }
-.last-seconds{
+
+.last-seconds {
   color: red;
 }
-.option{
+
+.option {
   margin: 15px;
+}
+
+@font-face {
+  font-family: 'clock';
+  src: url('fonts/digital-7.regular.ttf')format('truetype');
+  font-style: normal;
+  font-weight: 100;
+}
+
+#timer {
+  font-family: 'clock';
+  font-size: 3em;
 }
